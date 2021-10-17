@@ -1,0 +1,773 @@
+{
+	"info": {
+		"_postman_id": "8496e11f-46e1-47bf-96ee-73424a0ca5db",
+		"name": "sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "sadmin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "sadmin@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "sadmin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "sadmin@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 17 Oct 2021 06:32:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "csrftoken=feWKL8i50zCoDlJg4efvIgi8wLEgWeAg1yYYoCQwl2J8kEP46l40N7fshswCE0kh; expires=Sun, 16 Oct 2022 06:32:53 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "sessionid=pdxjknwy8xoxdsxv1mz3hmrtapfi10vg; expires=Sun, 31 Oct 2021 06:32:53 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User is logged in successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Logout success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 17 Oct 2021 06:32:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User is logged out successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "player5",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "player5@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "1993-06-22",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "player_5",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Ranasinghe",
+							"type": "text"
+						},
+						{
+							"key": "user_type",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "160",
+							"type": "text"
+						},
+						{
+							"key": "team_id",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create user success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "player5",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "player5@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "1993-06-22",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "player_5",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Ranasinghe",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "160",
+									"type": "text"
+								},
+								{
+									"key": "team_id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 17 Oct 2021 02:37:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"total\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "get teams",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/team",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"team"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get teams Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/team",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"team"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 17 Oct 2021 06:32:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "575"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Serbia\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Iraq\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Liberia\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Palau\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Nepal\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Guadeloupe\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Guernsey\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Western Sahara\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Reunion\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Norway\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Zimbabwe\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"Vietnam\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Holy See (Vatican City State)\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Syrian Arab Republic\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Latvia\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Dominican Republic\"\n        }\n    ],\n    \"total\": 16\n}"
+				}
+			]
+		},
+		{
+			"name": "get team by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/team/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"team",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get team by Id success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/team/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"team",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 17 Oct 2021 06:32:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "81"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"team_name\": \"Nepal\",\n        \"avg_score\": 44.44\n    },\n    \"total\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "get all players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/players",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Player by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/player/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"player",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter players by score",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/players/90",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"players",
+						"90"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "filter players by score success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/players/90",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"players",
+								"90"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 17 Oct 2021 06:34:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4358"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"All players were fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 20,\n            \"first_name\": \"Matthew\",\n            \"last_name\": \"Young\",\n            \"height\": 222,\n            \"date_of_birth\": \"1998-01-02\",\n            \"team_id\": 3,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 21,\n            \"first_name\": \"Gary\",\n            \"last_name\": \"Edwards\",\n            \"height\": 189,\n            \"date_of_birth\": \"1994-09-06\",\n            \"team_id\": 4,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 23,\n            \"first_name\": \"Nicole\",\n            \"last_name\": \"Anderson\",\n            \"height\": 190,\n            \"date_of_birth\": \"1977-05-04\",\n            \"team_id\": 6,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 25,\n            \"first_name\": \"Paul\",\n            \"last_name\": \"Salazar\",\n            \"height\": 186,\n            \"date_of_birth\": \"2003-12-26\",\n            \"team_id\": 8,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 37,\n            \"first_name\": \"Haley\",\n            \"last_name\": \"Lopez\",\n            \"height\": 223,\n            \"date_of_birth\": \"2018-07-26\",\n            \"team_id\": 4,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 43,\n            \"first_name\": \"Bethany\",\n            \"last_name\": \"Miller\",\n            \"height\": 159,\n            \"date_of_birth\": \"1996-02-29\",\n            \"team_id\": 10,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 45,\n            \"first_name\": \"Krystal\",\n            \"last_name\": \"Waters\",\n            \"height\": 243,\n            \"date_of_birth\": \"1974-02-10\",\n            \"team_id\": 12,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 52,\n            \"first_name\": \"Edward\",\n            \"last_name\": \"Henry\",\n            \"height\": 247,\n            \"date_of_birth\": \"1979-05-22\",\n            \"team_id\": 3,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 53,\n            \"first_name\": \"Richard\",\n            \"last_name\": \"Fisher\",\n            \"height\": 209,\n            \"date_of_birth\": \"1996-05-12\",\n            \"team_id\": 4,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 59,\n            \"first_name\": \"Robin\",\n            \"last_name\": \"Johnson\",\n            \"height\": 180,\n            \"date_of_birth\": \"2006-03-24\",\n            \"team_id\": 10,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 75,\n            \"first_name\": \"Claudia\",\n            \"last_name\": \"Le\",\n            \"height\": 215,\n            \"date_of_birth\": \"1970-05-06\",\n            \"team_id\": 10,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 79,\n            \"first_name\": \"Alexander\",\n            \"last_name\": \"Berry\",\n            \"height\": 201,\n            \"date_of_birth\": \"1993-11-20\",\n            \"team_id\": 14,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 81,\n            \"first_name\": \"Brian\",\n            \"last_name\": \"Phelps\",\n            \"height\": 185,\n            \"date_of_birth\": \"1992-05-27\",\n            \"team_id\": 16,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 91,\n            \"first_name\": \"Wendy\",\n            \"last_name\": \"Green\",\n            \"height\": 228,\n            \"date_of_birth\": \"2012-12-03\",\n            \"team_id\": 10,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 108,\n            \"first_name\": \"Kristin\",\n            \"last_name\": \"Bates\",\n            \"height\": 247,\n            \"date_of_birth\": \"2011-02-09\",\n            \"team_id\": 11,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 111,\n            \"first_name\": \"Nicholas\",\n            \"last_name\": \"Thornton\",\n            \"height\": 224,\n            \"date_of_birth\": \"1996-01-11\",\n            \"team_id\": 14,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 113,\n            \"first_name\": \"Ryan\",\n            \"last_name\": \"Ramos\",\n            \"height\": 185,\n            \"date_of_birth\": \"1990-02-21\",\n            \"team_id\": 16,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 114,\n            \"first_name\": \"Crystal\",\n            \"last_name\": \"Shaffer\",\n            \"height\": 195,\n            \"date_of_birth\": \"2011-03-21\",\n            \"team_id\": 1,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 117,\n            \"first_name\": \"Virginia\",\n            \"last_name\": \"Walker\",\n            \"height\": 222,\n            \"date_of_birth\": \"1971-12-02\",\n            \"team_id\": 4,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 124,\n            \"first_name\": \"Michael\",\n            \"last_name\": \"Conley\",\n            \"height\": 213,\n            \"date_of_birth\": \"1983-07-17\",\n            \"team_id\": 11,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 129,\n            \"first_name\": \"Nicole\",\n            \"last_name\": \"Fuller\",\n            \"height\": 208,\n            \"date_of_birth\": \"2015-05-11\",\n            \"team_id\": 16,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 135,\n            \"first_name\": \"Brittany\",\n            \"last_name\": \"Saunders\",\n            \"height\": 234,\n            \"date_of_birth\": \"1987-11-15\",\n            \"team_id\": 6,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 137,\n            \"first_name\": \"Tina\",\n            \"last_name\": \"Rogers\",\n            \"height\": 157,\n            \"date_of_birth\": \"1991-11-19\",\n            \"team_id\": 8,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 139,\n            \"first_name\": \"Michael\",\n            \"last_name\": \"Odom\",\n            \"height\": 163,\n            \"date_of_birth\": \"2021-05-09\",\n            \"team_id\": 10,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 140,\n            \"first_name\": \"John\",\n            \"last_name\": \"Daniels\",\n            \"height\": 221,\n            \"date_of_birth\": \"1982-06-27\",\n            \"team_id\": 11,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 142,\n            \"first_name\": \"Dillon\",\n            \"last_name\": \"Joyce\",\n            \"height\": 211,\n            \"date_of_birth\": \"2010-08-24\",\n            \"team_id\": 13,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 145,\n            \"first_name\": \"Robert\",\n            \"last_name\": \"Perkins\",\n            \"height\": 208,\n            \"date_of_birth\": \"2021-07-10\",\n            \"team_id\": 16,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 146,\n            \"first_name\": \"Karen\",\n            \"last_name\": \"Gonzalez\",\n            \"height\": 153,\n            \"date_of_birth\": \"2002-07-15\",\n            \"team_id\": 1,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 151,\n            \"first_name\": \"John\",\n            \"last_name\": \"Carter\",\n            \"height\": 236,\n            \"date_of_birth\": \"2002-11-27\",\n            \"team_id\": 6,\n            \"avg_score\": 100\n        },\n        {\n            \"id\": 157,\n            \"first_name\": \"Stephen\",\n            \"last_name\": \"Sanchez\",\n            \"height\": 237,\n            \"date_of_birth\": \"2002-06-01\",\n            \"team_id\": 12,\n            \"avg_score\": 100\n        }\n    ],\n    \"total\": 30\n}"
+				}
+			]
+		},
+		{
+			"name": "get User stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/stats",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"stats"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get User stats success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/stats",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"stats"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 17 Oct 2021 06:36:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7801"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"first_name\": \"Richard\",\n            \"login_count\": 1\n        },\n        {\n            \"first_name\": \"Juan\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Anne\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Samuel\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Todd\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"William\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Richard\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Alexis\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jacob\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Gregory\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Crystal\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Sandra\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Christina\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Anna\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Sarah\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Andrew\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Susan\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Brandon\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Robert\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Matthew\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Gary\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jacob\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Nicole\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Miranda\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Paul\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Adam\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Anthony\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Mandy\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Amanda\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Michael\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jesse\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Ashley\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Cynthia\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Kathryn\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Katie\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Madeline\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Haley\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Chad\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Andrea\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Andrew\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Scott\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jeremy\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Bethany\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Julie\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Krystal\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Eric\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Autumn\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Benjamin\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Steve\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Heather\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jeff\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Edward\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Richard\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Christopher\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Paula\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jerome\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Mary\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Carl\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Robin\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"David\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Linda\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Crystal\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Robert\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Ashley\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Stacy\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Sarah\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"George\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"David\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Douglas\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Nancy\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Lauren\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Aaron\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Mark\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Chris\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Claudia\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Mark\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Robert\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Rita\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Alexander\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Alan\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Brian\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Nathan\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Erica\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Michele\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Brian\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Christopher\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"James\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Mary\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Ronald\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jason\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Wendy\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Stephen\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Aaron\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Tara\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Robert\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Zachary\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Mary\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Heather\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Julie\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Dana\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Larry\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Ernest\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Rebecca\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Sarah\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Carmen\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jessica\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Timothy\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Kristin\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jeffrey\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Brooke\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Nicholas\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Brian\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Ryan\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Crystal\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Lindsay\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Thomas\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Virginia\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Daniel\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Heather\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Michelle\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Craig\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Katherine\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Mark\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Michael\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Kathryn\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Rose\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Danielle\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Meagan\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Nicole\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Cory\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Samantha\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Linda\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Thomas\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Charles\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Brittany\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jessica\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Tina\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Katrina\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Michael\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"John\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Timothy\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Dillon\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Austin\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Mario\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Robert\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Karen\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Robert\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Melvin\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Brian\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Justin\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"John\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jill\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Brenda\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jason\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"William\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Derrick\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Stephen\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jorge\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Wesley\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"James\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Stacey\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Dennis\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Frances\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Kara\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Shannon\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Maria\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Amanda\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Diane\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Adrian\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Gregory\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Jason\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Kylie\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Laura\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Emily\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Kristi\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Juan\",\n            \"login_count\": 0\n        },\n        {\n            \"first_name\": \"Ricky\",\n            \"login_count\": 0\n        }\n    ],\n    \"total\": 177\n}"
+				}
+			]
+		}
+	]
+}
